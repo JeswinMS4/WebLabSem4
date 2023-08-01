@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Validation</title>
+    <script language="javascript">
+        function button_click() {
+            var fname=f.fname.value;
+            var spchar="~!@#$%^&*()_=+:<>?[]{}/,.";
+            var num="0123456789";
+            if(fname.length<6){
+            alert("Please enter a valid username");
+            }
+            if(fname!=""){
+                for (i = 0; i <= fname.length - 1 ;i++){
+                    if(spchar.indexOf(fname.charAt(i))!=-1)
+                    {alert("No special characters in username");
+                    return false;
+                }
+                if(num.indexOf(fname.charAt(i))!=-1)
+                {
+                    alert("No numbers in username");
+                    return false;
+                }
+
+        }
+    }
+    if(fname.length>=6)
+    {
+        alert("Valid Username");
+    }
+}
+        function passwd(){
+        var pw=f2.pw.value;
+        var cpw=f2.cpw.value;
+        if(pw.length<6)
+        {
+            alert("Password must be 6 characters");
+        }
+        if(pw!=cpw)
+        {
+            alert("PASSWORD DON'T MATCH");
+        }
+        else if(pw.length>=6)
+        {
+            alert("PASSWORD VALIDATION SUCCESS");
+        }
+    }
+    </script>
+</head>
+<body>
+    <h2 align="center">USER VALIDATION</h2>
+    <form name="f">
+        <table align="center">
+            <tr>
+            <td>Username</td>
+            <td><input type="text" maxlength=20 name="fname" size=30 placeholder="Enter Username"></td>
+            
+        </tr>
+           
+            <tr >
+                <td><input type="button" value="SUBMIT" onclick="button_click()"></td>
+            </tr>
+        </table>
+    </form>
+    <form name="f2">
+    <table align="center">
+            <tr>
+                <td>Password</td>
+                <td><input type="text" maxlength=20 name="pw" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="text" maxlength=20 name="cpw" placeholder="Enter Password"></td>
+            </tr>
+            <tr >
+                <td><input type="button" value="SUBMIT" onclick="passwd()"></td>
+            </tr>
+            </table>
+    </form>
+      
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Country Capital</title>
+</head>
+<style> 
+body{
+    background-image: url(bgmimg2.jpg);
+    background-size:cover;
+}
+h1
+{
+color:maroon;
+text-align: center;
+font-size:50px;
+font-family:'Segoe UI';
+}
+.textbox1
+{
+color:indigo; 	
+font-size: 20px;
+font-weight: bold;
+font-family:Verdana;
+}
+#sbox1{
+    color:blueviolet;
+    font-size: 20px;
+
+}
+</style>
+<body>
+<center>
+<h1> Select the country name to find its capital</h1>
+<table>
+<form name="myform">
+<td>Select Country <select name="country" id="sbox1" onClick="myFunction()" required>
+<option value=""></option>
+<option value="NEW DELHI">INDIA</option>
+<option value="CANBERRA">AUSTRALIA</option>
+<option value="WASHINGTON D.C">AMERICA</option>
+<option value="LONDON">UNITEDKINGDOM</option>
+<option value="BERLIN">GERMANY</option>
+</td>
+</select>
+<td>
+Capital <input type="text" class="textbox1" id="sbox2">
+</td>
+</form>
+</table>
+</center>
+<script>
+function myFunction()
+{ var a=document.getElementById("sbox1").value; 
+document.getElementById("sbox2").value=a; 
+}
+</script> </body> </html>
+
+
+
